@@ -59,6 +59,7 @@ std::string enum_to_string(day_of_week e)
 {
 switch(e)
 {
+    case MONDAY: return "MONDAY";
     case TUESDAY: return "TUESDAY";
     case WEDNESDAY: return "WEDNESDAY";
     case THURSDAY: return "THURSDAY";
