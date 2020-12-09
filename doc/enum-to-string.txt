@@ -1,0 +1,55 @@
+*indent-object.txt*         Text objects based on indent levels.
+
+           Copyright (c) 2020 Chris Schilling
+
+Code generator to create functions that return c++ enums as std::strings
+
+Indent Text Objects
+
+INTRODUCTION                      |enum-to-string-introduction|
+ABOUT                             |enum-to-string-about|
+
+
+==============================================================================
+INTRODUCTION                                     *enum-to-string-introduction*
+
+
+Sometimes I wish to log enums as strings instead of their integer value in
+order to make debugging easier (especially for newcommers to a project).
+
+This plugin defines a new command which, when executed on the beginning of a
+c++ enum declaration, will generate a function body that will receive the 
+enum as an input parameter and return a stingified version of that enum.
+
+
+==============================================================================
+ABOUT                                                          *indtobj-about*
+
+vim-enum-to-string was written by Chris Schilling <chris2schill@gmail.com>. The
+project repository is kept at:
+
+http://github.com/chris2schill/vim-enum-to-string
+
+Any feedback or criticism is welcome, and can be mailed to the author at the
+above email address. Alternatively issues can be raised on the project
+website.
+
+Licence:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
