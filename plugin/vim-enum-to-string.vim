@@ -26,7 +26,7 @@
 
 command! -range EnumToStringCreateCaseStatement :<line1>,<line2>normal! _icase w$x_wy$A: return ""hpA;
 
-command! EnumToStringCreateFunctionBody :normal!  Otemplate<>j_istd::string /enumea_to_stringwy$"ay$hr(A e)/{oswitch(e){Vjd_/}O}
+command! EnumToStringCreateFunctionBody :normal!  Otemplate<>j_istd::string /enumea_to_stringwy$"ay$hr(A e)/{oswitch(e){dd_/}O}
 
 function! s:GenEnumToString()
     let save_pos = getpos(".")
