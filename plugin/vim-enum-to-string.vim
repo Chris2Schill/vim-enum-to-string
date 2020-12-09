@@ -24,7 +24,7 @@
 "
 "--------------------------------------------------------------------------------
 
-command! -range EnumToStringCreateCaseStatement :<line1>,<line2>normal! _icase w$x_wy$A: return ""hpA;
+command! -range EnumToStringCreateCaseStatement :<line1>,<line2>normal! _icase weld$_wy$A: return ""hpA;==
 
 command! EnumToStringCreateFunctionBody :normal!  Otemplate<>j_istd::string /enumea_to_stringwy$"ay$hr(A e)/{oswitch(e){dd_/}O}
 
