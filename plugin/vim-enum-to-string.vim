@@ -24,12 +24,32 @@
 "
 "--------------------------------------------------------------------------------
 
+
+if !exists('g:enum_to_string_is_template')
+    let g:enum_to_string_is_template = 0
+endif
+
+if !exists('g:enum_to_string_template_string')
+    let g:enum_to_string_template_string = 'template<>'
+endif
+
+if !exists('g:enum_to_string_function_name')
+    let g:enum_to_string_function_name = 'enum_to_string'
+endif
+
 command! -range EnumToStringCreateCaseStatement :<line1>,<line2>normal! _icase weld$_wy$A: return ""hpA;==
 
-command! EnumToStringCreateFunctionBody :normal!  Otemplate<>j_istd::string /enumea_to_stringwy$"ay$hr(A e)/{oswitch(e){dd_/}O}
+function! s:GenTemplateString()
+    if g:enum_to_string_is_template == 1
+        exec ':normal! O'.g:enum_to_string_template_string.'j_'
+    endif
+endfunction
+
+command! EnumToStringCreateFunctionBody exec ':normal! istd::string /enumdwi'.g:enum_to_string_function_name.' wy$"ay$hr(A e)/{oswitch(e){dd_/}O}'
 
 function! s:GenEnumToString()
     let save_pos = getpos(".")
+    call s:GenTemplateString()
     EnumToStringCreateFunctionBody
     normal! vi{:EnumToStringCreateCaseStatement oreturn "Compiler should not let you get here."A;
     call setpos(".", save_pos)
