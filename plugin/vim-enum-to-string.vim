@@ -37,7 +37,11 @@ if !exists('g:enum_to_string_function_name')
     let g:enum_to_string_function_name = 'enum_to_string'
 endif
 
-command! -range EnumToStringCreateCaseStatement :<line1>,<line2>normal! _icase weld$_wy$A: return ""hpA;==
+function! s:CreateCaseStatement()
+    normal! _icase l{/(yi(hpxhxi::weld$_wy$A: return ""hpA;==
+endfunction
+
+command! -range EnumToStringCreateCaseStatement <line1>,<line2>call s:CreateCaseStatement()
 
 function! s:GenTemplateString()
     if g:enum_to_string_is_template == 1
